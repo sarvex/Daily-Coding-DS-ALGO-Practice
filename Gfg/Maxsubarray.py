@@ -27,9 +27,9 @@ def maxSubArraySum(a, size):
     
 a=[]
 n=int(input("size"))
-for i in range(n):
-  b=int(input("Enter array element"))
-  a.append(b)
+for _ in range(n):
+    b=int(input("Enter array element"))
+    a.append(b)
 print(maxSubArraySum(a,n))
 
 

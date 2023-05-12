@@ -1,9 +1,5 @@
 num = int(input())
-suy = []
-
-for i in range(num):
-    suy.append(int(input()))
-
+suy = [int(input()) for _ in range(num)]
 suy.sort()
 
 for i in range(num):

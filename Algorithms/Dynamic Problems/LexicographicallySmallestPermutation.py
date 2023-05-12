@@ -36,8 +36,7 @@ def SmallestPermutation(a,b):
         satisfied_list.append(int(array_test))
     small=min(satisfied_list)
     str_arr=list(str(small))
-    ans=list(map(int,str_arr))
-    return ans
+    return list(map(int,str_arr))
 #Input Code  
 a=int(input())
 b=int(input())

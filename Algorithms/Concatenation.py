@@ -10,10 +10,11 @@ class Solution(object):
         for index in range(1,len(word)):
             prefix = word[:index]
             suffix = word[index:]
-            if prefix in Dict:
-                if suffix in Dict or self.Form(suffix, Dict, cache):
-                    cache[word]=True
-                    return True
+            if prefix in Dict and (
+                suffix in Dict or self.Form(suffix, Dict, cache)
+            ):
+                cache[word]=True
+                return True
         cache[word]=False
         return False
 

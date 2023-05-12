@@ -44,13 +44,13 @@ m=int(input("Size of first array"))
 arr1 = [ ]
 
 arr2 = [ ]
-for i in range(m):
-  a=int(input("element"))
-  arr1.append(a)
+for _ in range(m):
+    a=int(input("element"))
+    arr1.append(a)
 n=int(input("Enter size of second array"))
-for j in range(n):
-  b=int(input("element"))
-  arr2.append(b)
+for _ in range(n):
+    b=int(input("element"))
+    arr2.append(b)
 
 printUnion(arr1, arr2, m, n)
 

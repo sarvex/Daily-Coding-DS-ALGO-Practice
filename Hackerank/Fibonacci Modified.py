@@ -11,7 +11,6 @@ def fibonacciModified(t1, t2, n):
     a = t1;
     b = t2;
     c = t1+ (t2*t2);
-    count = 3;
     if (n == 1):
         return t1;
     elif (n == 2):
@@ -19,8 +18,9 @@ def fibonacciModified(t1, t2, n):
     elif(n == 3):
         return c;
     else:
-        while(count < n):
-            count = count+ 1;
+        count = 3;
+        while (count < n):
+            count += 1;
             a = b;
             b = c;
             c = a + b*b;
@@ -28,18 +28,15 @@ def fibonacciModified(t1, t2, n):
 
 
 if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+    with open(os.environ['OUTPUT_PATH'], 'w') as fptr:
+        t1T2n = raw_input().split()
 
-    t1T2n = raw_input().split()
+        t1 = int(t1T2n[0])
 
-    t1 = int(t1T2n[0])
+        t2 = int(t1T2n[1])
 
-    t2 = int(t1T2n[1])
+        n = int(t1T2n[2])
 
-    n = int(t1T2n[2])
+        result = fibonacciModified(t1, t2, n)
 
-    result = fibonacciModified(t1, t2, n)
-
-    fptr.write(str(result) + '\n')
-
-    fptr.close()
+        fptr.write(str(result) + '\n')

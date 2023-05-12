@@ -1,7 +1,6 @@
 def leftRotate(arr, d, n):
 
-    for i in range(d):
-
+    for _ in range(d):
         leftRotatebyOne(arr, n)
  
 #Function to left Rotate arr[] of size n by 1*/ 
@@ -32,9 +31,9 @@ def printArray(arr,size):
 
 arr = []
 n=int(input("Size "))
-for i in range(0,n):
-  b=int(input("Array element "))
-  arr.append(b)
+for _ in range(0,n):
+    b=int(input("Array element "))
+    arr.append(b)
 d=int(input("Enter by how many elements to rotate array "))
 leftRotate(arr,d,n)
 printArray(arr,n)

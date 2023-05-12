@@ -27,16 +27,15 @@ for i in range(n):
         else:
             print('NO')
             break
-    else:
-        if int(s1[i]) < int(s2[i]) and not less:
-            print('NO')
-            break
-        elif int(s1[i]) > int(s2[i]) and not more:
-            print('NO')
-            break
-        elif int(s1[i]) == int(s2[i]):
-            print('NO')
-            break
+    elif int(s1[i]) < int(s2[i]) and not less:
+        print('NO')
+        break
+    elif int(s1[i]) > int(s2[i]) and not more:
+        print('NO')
+        break
+    elif int(s1[i]) == int(s2[i]):
+        print('NO')
+        break
 else:
     print('YES')
     

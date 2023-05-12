@@ -27,7 +27,7 @@ def binarySearch(a,n):
     
 arr=[]
 m=int(input("Enter size of array : "))
-for i in range(m):
+for _ in range(m):
   e=int(input())
   arr.append(e)
 n=int(input("Enter element to be searched  : "))

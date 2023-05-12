@@ -9,7 +9,7 @@
 # z2 = n[5] 
 
 t = int(input())            # Taking input for number of test cases  
-for i in range(t):
+for _ in range(t):
     temp = input()
     n = temp.split(" ")     # Spliting the string temp based on spaces to get individual element
     if ((n[1] >= n[0]) and (n[3] >= n[2]) and (n[5] <= n[4])):

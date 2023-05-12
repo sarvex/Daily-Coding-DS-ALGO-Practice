@@ -16,13 +16,13 @@ n=int(in_str[1])
 final=[0]*n
 
 #make a matrix of m such lists using list comprehensions
-final=[list(final) for i in range(m)]
+final = [list(final) for _ in range(m)]
 
 for i in range(m):
     for j in range(n):
         if i==0 or j==0 or i==m-1 or j==n-1:
             final[i][j]=1                        #changing the list without any copy method
-            
+
 #print in the fashion as shown in Sample output
 for i in final:
     print(i)

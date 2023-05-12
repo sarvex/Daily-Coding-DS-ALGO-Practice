@@ -57,7 +57,7 @@ def greedyColoring(adj, V):
 # Driver Code
 if __name__ == '__main__':
 	
-	g1 = [[] for i in range(5)]
+	g1 = [[] for _ in range(5)]
 	g1 = addEdge(g1, 0, 1)
 	g1 = addEdge(g1, 0, 2)
 	g1 = addEdge(g1, 1, 2)
@@ -67,7 +67,7 @@ if __name__ == '__main__':
 	print("Coloring of graph 1 ")
 	greedyColoring(g1, 5)
 
-	g2 = [[] for i in range(5)]
+	g2 = [[] for _ in range(5)]
 	g2 = addEdge(g2, 0, 1)
 	g2 = addEdge(g2, 0, 2)
 	g2 = addEdge(g2, 1, 2)

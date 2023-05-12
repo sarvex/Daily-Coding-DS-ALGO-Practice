@@ -9,11 +9,7 @@ import sys
 # Complete the minimumSwaps function below.
 def minimumSwaps(arr):
     swaps = 0
-    tmp = {}
-
-    for i, val in enumerate(arr):
-        tmp[val] = i
-
+    tmp = {val: i for i, val in enumerate(arr)}
     for i in range(len(arr)):
         # because they are consecutives, I can see if the number is where it belongs
         if arr[i] != i+1:
@@ -28,14 +24,11 @@ def minimumSwaps(arr):
     return swaps
 
 if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+    with open(os.environ['OUTPUT_PATH'], 'w') as fptr:
+        n = int(input())
 
-    n = int(input())
+        arr = list(map(int, input().rstrip().split()))
 
-    arr = list(map(int, input().rstrip().split()))
+        res = minimumSwaps(arr)
 
-    res = minimumSwaps(arr)
-
-    fptr.write(str(res) + '\n')
-
-    fptr.close()
+        fptr.write(str(res) + '\n')

@@ -1,11 +1,11 @@
 # Creating a recursive function
 def tower_of_hanoi(disks, source, auxiliary, target):
-    if(disks == 1):
-        print('Move disk 1 from rod {} to rod {}.'.format(source, target))
+    if (disks == 1):
+        print(f'Move disk 1 from rod {source} to rod {target}.')
         return
     # function call itself
     tower_of_hanoi(disks - 1, source, target, auxiliary)
-    print('Move disk {} from rod {} to rod {}.'.format(disks, source, target))
+    print(f'Move disk {disks} from rod {source} to rod {target}.')
     tower_of_hanoi(disks - 1, auxiliary, source, target)
 
 

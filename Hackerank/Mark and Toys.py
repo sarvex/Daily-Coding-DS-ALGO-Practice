@@ -16,18 +16,15 @@ def maximumToys(prices, k):
     return c
 
 if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+    with open(os.environ['OUTPUT_PATH'], 'w') as fptr:
+        nk = input().split()
 
-    nk = input().split()
+        n = int(nk[0])
 
-    n = int(nk[0])
+        k = int(nk[1])
 
-    k = int(nk[1])
+        prices = list(map(int, input().rstrip().split()))
 
-    prices = list(map(int, input().rstrip().split()))
+        result = maximumToys(prices, k)
 
-    result = maximumToys(prices, k)
-
-    fptr.write(str(result) + '\n')
-
-    fptr.close()
+        fptr.write(str(result) + '\n')

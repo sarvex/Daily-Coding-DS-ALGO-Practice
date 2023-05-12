@@ -17,7 +17,8 @@ def li(): return list(map(int, sys.stdin.readline().split()))
 def mp(): return map(int, sys.stdin.readline().split())
 def inp(): return int(sys.stdin.readline())
 def pr(n): return sys.stdout.write(str(n)+"\n")
-def prl(n): return sys.stdout.write(str(n)+" ")
+def prl(n):
+    return sys.stdout.write(f"{str(n)} ")
 
 
 if os.path.exists('input.txt'):

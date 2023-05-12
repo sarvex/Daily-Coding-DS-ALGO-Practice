@@ -14,11 +14,7 @@ class Node:
 #top of stack 
 def peek(s): 
 
-    if len(s) > 0: 
-
-        return s[-1] 
-
-    return None
+    return s[-1] if len(s) > 0 else None
 
 def postOrderTraversal(root): 
 

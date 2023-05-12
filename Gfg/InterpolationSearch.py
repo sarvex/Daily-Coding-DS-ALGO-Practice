@@ -5,34 +5,28 @@ def interpolationSearch(arr,k):
     low=0
     high=len(arr)-1
     mid=0
-    
+
     while (arr[low]<=k) and (arr[high]>=k):
-        
+
         if (arr[high]-arr[low])==0:
-            
+
             return (low+high)//2
-            
+
         mid=low+((k-arr[low])*(high-low))//(arr[high]-arr[low])
-        
+
         if arr[mid]<k:
-            
+
             low=mid+1
-            
+
         elif arr[mid]>k:
-            
+
             high=mid-1
-            
+
         else:
-            
+
             return mid
-            
-    if arr[low]==k:
-        
-        return low
-        
-    else:
-        
-        return -1
+
+    return low if arr[low]==k else -1
 
 
 

@@ -43,8 +43,9 @@ Explanation 0
 
 The details are sorted based on the second attribute, since K is zero-indexed.
 '''
+
 N, M = map(int, input().split())
-NUMS = [list(map(int, input().split())) for i in range(N)]
+NUMS = [list(map(int, input().split())) for _ in range(N)]
 K = int(input())
 
 NUMS.sort(key=lambda x: x[K])

@@ -11,14 +11,13 @@ def pangrams(s):
     lower_s = s.lower()
     for i in range(len(lower_s)):
         ascii_array.append(ord(lower_s[i]))
-    for i in range(97,123):
-        if i not in ascii_array:
-            return "not pangram"
-    return 'pangram'
+    return next(
+        ("not pangram" for i in range(97, 123) if i not in ascii_array),
+        'pangram',
+    )
 
 if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
-    s = input()
-    result = pangrams(s)
-    fptr.write(result + '\n')
-    fptr.close()
+    with open(os.environ['OUTPUT_PATH'], 'w') as fptr:
+        s = input()
+        result = pangrams(s)
+        fptr.write(result + '\n')

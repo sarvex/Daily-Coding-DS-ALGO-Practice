@@ -5,16 +5,16 @@ def findMissing(a, n):
   
 
     for i in range(n) :
- 
+
 
         # if value is negative or greater than array size then we skip the current iteration.
         if (a[i] <= 0 or a[i] > n):
 
             continue
- 
+
 
         v = arr[i] #storing the  current unmarked value in a variable
- 
+
          #traverse the array until we reach at an unmarked or already marked element
 
         while (a[v - 1] != v):
@@ -28,18 +28,9 @@ def findMissing(a, n):
             if (v <= 0 or v > n):
 
                 break
- 
 
-    for i in range(n):
 
-        if (a[i] != i + 1) :
-
-            return i + 1
- 
-
-    # after marking all the elements return array size +1
-
-    return n + 1
+    return next((i + 1 for i in range(n) if (a[i] != i + 1)), n + 1)
  
 # Input 
 
@@ -47,9 +38,9 @@ if __name__ == "__main__":
     n=int(input())
 
     arr = [ ]
-    for i in range(n):
-      b=int(input())
-      arr.append(b)
+    for _ in range(n):
+        b=int(input())
+        arr.append(b)
 
     d = findMissing(arr, n )
 

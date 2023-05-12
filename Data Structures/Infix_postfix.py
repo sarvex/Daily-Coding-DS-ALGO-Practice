@@ -7,20 +7,16 @@ class Convert:
     self.precedence={'+':1,'-':1,'*':2,'/':2,'^':3}
     
   def isEmpty(self):
-    if self.top==-1:
-      return True
-    else:
-      return False
+    return self.top == -1
   
   def peek(self):
     return self.array[-1]
   # Pop the element from the stack
   def pop(self):
-    if not self.isEmpty():
-      self.top =self.top-1
-      return self.array.pop()
-    else:
+    if self.isEmpty():
       return "$"
+    self.top =self.top-1
+    return self.array.pop()
       
   # Push the element to the stack
   def push(self,op):
@@ -36,10 +32,7 @@ class Convert:
     try:
       a=self.precedence[i]
       b=self.precedence[self.peek()]
-      if a<=b:
-        return True
-      else:
-        return False
+      return a <= b
     except KeyError:
       return False
   

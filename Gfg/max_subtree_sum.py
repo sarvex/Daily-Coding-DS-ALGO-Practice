@@ -18,11 +18,11 @@ def findLargestSubtreeSumUtil(root, ans):
 
     # return 0 to parent node.  
 
-    if (root == None):  
+    if root is None:  
 
         return 0
 
-      
+
 
     # Subtree sum rooted at current node.  
 
@@ -32,7 +32,7 @@ def findLargestSubtreeSumUtil(root, ans):
 
                findLargestSubtreeSumUtil(root.right, ans))  
 
-  
+
 
     # Update answer if current subtree  
 
@@ -40,7 +40,7 @@ def findLargestSubtreeSumUtil(root, ans):
 
     ans[0] = max(ans[0], currSum)  
 
-  
+
 
     # Return current subtree sum to  
 
@@ -59,17 +59,17 @@ def findLargestSubtreeSum(root):
 
     # then answer is 0.  
 
-    if (root == None):      
+    if root is None:      
 
         return 0
 
-      
+
 
     # Variable to store maximum subtree sum.  
 
     ans = [-999999999999] 
 
-  
+
 
     # Call to recursive function to  
 
@@ -77,7 +77,7 @@ def findLargestSubtreeSum(root):
 
     findLargestSubtreeSumUtil(root, ans)  
 
-  
+
 
     return ans[0] 
 

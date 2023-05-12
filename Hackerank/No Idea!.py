@@ -2,7 +2,7 @@
 io = input().split()
 m = int(io[0])
 n = int(io[1])
-storage = list()
+storage = []
 count = 0
 storage = list(map(int, input().strip().split()))
 A = set(map(int, input().strip().split()))

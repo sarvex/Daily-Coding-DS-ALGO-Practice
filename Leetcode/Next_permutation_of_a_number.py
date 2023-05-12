@@ -4,7 +4,7 @@ from itertools import permutations
 # Get input from the user
 n=int(input("Enter a number: "))
 # Create a list by coonverting n into a string
-lst=[x for x in str(n)]
+lst = list(str(n))
 # Get all permutations of the string n
 lst = list(permutations(lst))
 # Create an empty list to store the permutations in initeger format

@@ -3,9 +3,7 @@ class Solution:
         
         output = False
         if len(matrix) == 1 and len(matrix[0]) == 1:
-            if target == matrix[0][0]:return True 
-            else:return False
-            
+            return target == matrix[0][0]
         j = len(matrix[0]) - 1
         for i in range(len(matrix)):
             if target == matrix[i][j]:

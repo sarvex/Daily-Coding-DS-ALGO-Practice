@@ -1,24 +1,12 @@
 
 def countParenth(symb, oper, n):
-	F = [[0 for i in range(n + 1)]
-		for i in range(n + 1)]
-	T = [[0 for i in range(n + 1)]
-		for i in range(n + 1)]
+	F = [[0 for _ in range(n + 1)] for _ in range(n + 1)]
+	T = [[0 for _ in range(n + 1)] for _ in range(n + 1)]
 	for i in range(n):
-		if symb[i] == 'F':
-			F[i][i] = 1
-		else:
-			F[i][i] = 0
-
-		if symb[i] == 'T':
-			T[i][i] = 1
-		else:
-			T[i][i] = 0
-
-	
+		F[i][i] = 1 if symb[i] == 'F' else 0
+		T[i][i] = 1 if symb[i] == 'T' else 0
 	for gap in range(1, n):
-		i = 0
-		for j in range(gap, n):
+		for i, j in enumerate(range(gap, n)):
 			T[i][j] = F[i][j] = 0
 			for g in range(gap):
 
@@ -43,7 +31,6 @@ def countParenth(symb, oper, n):
 								T[i][k] * F[k + 1][j])
 					F[i][j] += (T[i][k] * T[k + 1][j] +
 								F[i][k] * F[k + 1][j])
-			i += 1
 	return T[0][n - 1]
 
 

@@ -3,7 +3,7 @@
 for _ in range(int(input())):
     N, K = map(int, input().split())
     number = input()
-    p = list()
+    p = []
     for i in range(len(number)-K):
         product=1
         str = number[i:i+K]

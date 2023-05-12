@@ -12,10 +12,10 @@ def floydWarshall(graph):
 def printSolution(dist):
     for i in range(V):
         for j in range(V):
-            if(dist[i][j] == INF):
+            if (dist[i][j] == INF):
                 print ("%7s" % ("INF"))
             else:
-                print ("{}".format((dist[i][j])), end = " "),
+                (print(f"{dist[i][j]}", end = " "), )
             if j == V-1:
                 print ("")
 # Author : Abhishek Sharma

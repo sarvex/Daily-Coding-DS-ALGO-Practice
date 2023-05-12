@@ -31,15 +31,12 @@ def breakingRecords(scores):
     return(best, worst)
 
 if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+    with open(os.environ['OUTPUT_PATH'], 'w') as fptr:
+        n = int(input().strip())
 
-    n = int(input().strip())
+        scores = list(map(int, input().rstrip().split()))
 
-    scores = list(map(int, input().rstrip().split()))
+        result = breakingRecords(scores)
 
-    result = breakingRecords(scores)
-
-    fptr.write(' '.join(map(str, result)))
-    fptr.write('\n')
-
-    fptr.close()
+        fptr.write(' '.join(map(str, result)))
+        fptr.write('\n')

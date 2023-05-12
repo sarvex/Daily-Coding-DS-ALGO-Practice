@@ -12,17 +12,17 @@ def colorGraph(graph):
  
     res = {}
     for u in range(N):
- 
-        assigned = set([res.get(i) for i in graph.adj[u] if i in res])
- 
+     
+        assigned = {res.get(i) for i in graph.adj[u] if i in res}
+
         color = 1
         for c in assigned:
             if color != c:
                 break
             color = color + 1
- 
+
         res[u] = color
- 
+
     for v in range(N):
         print("Color assigned to vertex", v, "is", colors[res[v]])
  

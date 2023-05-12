@@ -16,11 +16,7 @@ import sys
 #
 
 def bonAppetit(bill, k, b):
-    # Write your code here
-    count=0
-    for i in range(len(bill)):
-        if(i!=k):
-            count+=bill[i]
+    count = sum(bill[i] for i in range(len(bill)) if (i!=k))
     pay = count//2
     if(pay != b):
         print(b-pay)

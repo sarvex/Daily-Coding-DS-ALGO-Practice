@@ -2,18 +2,14 @@ def subsetSum(A, n, sum):
 
     if sum == 0:
         return True
- 
+
     if n < 0 or sum < 0:
         return False
- 
-    include = subsetSum(A, n - 1, sum - A[n])
- 
-    if include:
+
+    if include := subsetSum(A, n - 1, sum - A[n]):
         return True
- 
-    exclude = subsetSum(A, n - 1, sum)
- 
-    return exclude
+
+    return subsetSum(A, n - 1, sum)
 
 
 def partition(A):

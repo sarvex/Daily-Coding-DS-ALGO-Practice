@@ -19,7 +19,7 @@ def trapping_rainwater(arr,n):
 if __name__=="__main__":
 	array=[]
 	n=int(input("size of array ?"))
-	for k in range(0,n):
+	for _ in range(0,n):
 		a=int(input("array elements"))
 		array.append(a)
 

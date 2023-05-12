@@ -6,9 +6,9 @@ def sort012( a, arr_size):
     if a[mid] == 0:
       a[lo], a[mid] = a[mid], a[lo]
       lo = lo + 1
-      mid = mid + 1
+      mid += 1
     elif a[mid] == 1:
-      mid = mid + 1
+      mid += 1
     else:
       a[mid], a[hi] = a[hi], a[mid] 
       hi = hi - 1
@@ -22,7 +22,7 @@ def printArray( a):
 
 n=int(input("Size"))
 arr=[]
-for i in range(0,n):
+for _ in range(0,n):
   b=int(input("Enter array elements"))
   arr.append(b)
 arr=sort012(arr,n)

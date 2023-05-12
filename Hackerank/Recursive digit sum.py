@@ -8,25 +8,22 @@ import sys
 
 # Complete the superDigit function below.
 def superDigit(n, k):
-    n = str(sum([int(i) for i in n])*k);
-    k = 1;
+    n = str(sum(int(i) for i in n) * k);
     if len(n) > 1:
-        n = sum([int(i) for i in n]);
+        n = sum(int(i) for i in n);
+        k = 1;
         return superDigit(str(n),k);
     return n;
 
 
 if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+    with open(os.environ['OUTPUT_PATH'], 'w') as fptr:
+        nk = input().split()
 
-    nk = input().split()
+        n = nk[0]
 
-    n = nk[0]
+        k = int(nk[1])
 
-    k = int(nk[1])
+        result = superDigit(n, k)
 
-    result = superDigit(n, k)
-
-    fptr.write(str(result) + '\n')
-
-    fptr.close()
+        fptr.write(str(result) + '\n')

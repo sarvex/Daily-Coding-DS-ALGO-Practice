@@ -51,9 +51,9 @@ class Stack:
 if __name__ == "__main__":
     s2 = Stack()
     print("Enter values to push in the stack: ")
-    value = [ele for ele in input().split()]
-    for i in range(len(value)):
-        s2.push(value[i])
+    value = list(input().split())
+    for item in value:
+        s2.push(item)
     print("The stack is:")
     s2.display()
     print('\nThe first element which is removed is: ')

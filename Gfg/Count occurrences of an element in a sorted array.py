@@ -60,16 +60,16 @@ def last(a, low, high, x, n):
 			return last(a, (mid + 1), high, x, n)	
 	return -1
 
-a = [] 
+a = []
 # number of elemetns as input
 n = int(input("Enter number of elements : "))
-  
+
 # iterating till one less then
 # the number of elements given by user
-for i in range(0, n):
-    p = int(input())  
-    a.append(p)
-    
+for _ in range(0, n):
+	p = int(input())
+	a.append(p)
+
 x = int(input("Enter the element to be counted : ")) # Element to be counted in a[]
 n = len(a)
 c = countocc(a, x, n)

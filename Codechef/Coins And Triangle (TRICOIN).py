@@ -1,10 +1,10 @@
-import math 
+import math
 t = int(input())        #taking input of test cases 
-for i in range(t): 
+for _ in range(t):
     s = int(input())    #s denotes number of gold coin
-    d= (1+8*s)          
-    d= int (math.sqrt(d))   
-    n = int((-1+d)/2)       
+    d= (1+8*s)
+    d= int (math.sqrt(d))
+    n = int((-1+d)/2)
     print(n)
 #this is a simple AP(Arithmatic Progression) problem
 # we used the sum of AP formula S = n/2(2a+ (n-1)diff)

@@ -24,10 +24,7 @@ def getSum(n):
 
 # Function that gives sum of squares of digits of numbers
 def getSquareSum(n):      
-    SquareSum = 0
-    for digit in str(n):  
-      SquareSum += int(digit)*int(digit)       
-    return SquareSum
+    return sum(int(digit)**2 for digit in str(n))
 
 # Function that check number is prime or not
 def checkPrime(number):
@@ -35,11 +32,7 @@ def checkPrime(number):
     if number == 2:
         isPrime = True
     if number > 2:
-        isPrime = True
-        for i in range(2, number):
-            if number % i == 0:
-                isPrime = False
-                break
+        isPrime = all(number % i != 0 for i in range(2, number))
     return isPrime
 
 # Defining a function that returns all lucky numbers
@@ -48,25 +41,17 @@ def lucky_number(a,b):
     # List to store sum and sum of squares of digits of numbers
     FullList=[]
 
-    # List to store final lucky numbers
-    primeList=[]
-
     # For loop to append sum and sum of squares of digits of numbers in FullList
     for i in range(a,b+1):
         sumList=[getSum(i),getSquareSum(i)]
         FullList.append(sumList)
 
-    # Declaring a counter
-    counter=0
-
-    # For loop for storing all lucky numbers into primeList
-    for i in range(a,b+1):
-        if checkPrime(FullList[counter][0]) and checkPrime(FullList[counter][1]):
-            primeList.append(i)
-        counter+=1
-
-    #return primeList
-    return primeList
+    return [
+        i
+        for counter, i in enumerate(range(a, b + 1))
+        if checkPrime(FullList[counter][0])
+        and checkPrime(FullList[counter][1])
+    ]
 
 # Main function
 def main():
@@ -89,10 +74,8 @@ def main():
 ## To check if the file contains the main function and then calling it
 if __name__ == '__main__':
     testcase=int(input("Enter the number of Test cases : "))
-    tc=1
-    while(tc<=testcase):
+    for _ in range(1, testcase + 1):
         main()
-        tc+=1
 #OUTPUT
 # Enter the lower bound number :1
 # Enter the upper bound number :20

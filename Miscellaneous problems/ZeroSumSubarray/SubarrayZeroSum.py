@@ -31,7 +31,7 @@ array = []
 #Add integers to array
 num1 = int(input("Enter size for the array: "))
 
-for i in range(num1):
+for _ in range(num1):
     num2 = int(input("Enter integer: "))
     array.append(num2)
 

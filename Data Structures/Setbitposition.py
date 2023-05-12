@@ -16,9 +16,7 @@ def findPosition(n):  #Finding position of setbit
         count+=1
     return count
 def powerofTwo(n): #Checking given number is power of 2 or not.
-    if(n==0):
-        return False
-    return (n&(n-1))==0
+    return False if (n==0) else (n&(n-1))==0
 n=int(input())
 pos = findPosition(n)
 if (pos == -1):

@@ -24,13 +24,13 @@ def findRange(arr, n):
     
 if __name__ == '__main__':
 
-    arr = []
+  arr = []
 
-    n = int(input("size : "))
-    for i in range(n):
-      b=int(input("Array element : "))
-      arr.append(b)
-    findRange(arr, n)
+  n = int(input("size : "))
+  for _ in range(n):
+    b=int(input("Array element : "))
+    arr.append(b)
+  findRange(arr, n)
     
     
 #Example

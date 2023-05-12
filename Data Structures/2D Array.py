@@ -20,15 +20,8 @@ def hourglassSum(arr):
     return maxsum
     
 if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+    with open(os.environ['OUTPUT_PATH'], 'w') as fptr:
+        arr = [list(map(int, input().rstrip().split())) for _ in range(6)]
+        result = hourglassSum(arr)
 
-    arr = []
-
-    for _ in range(6):
-        arr.append(list(map(int, input().rstrip().split())))
-
-    result = hourglassSum(arr)
-
-    fptr.write(str(result) + '\n')
-
-    fptr.close()
+        fptr.write(str(result) + '\n')

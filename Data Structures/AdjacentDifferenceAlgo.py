@@ -5,20 +5,10 @@
 # Size of List
 n = int(input("Enter the size of List : "))
 
-# initialising empty list
-ini_list = []  
-
-# Taking n elements input in list
-for i in range(0,n):
-    ini_list.append(int(input()))
-
+ini_list = [int(input()) for _ in range(0,n)]
 # printing ini_list
-print("intial_list", str(ini_list))
-  
-# Calculating difference list
-diff_list = []
-for x, y in zip(ini_list[0::], ini_list[1::]):
-    diff_list.append(y-x)
-      
+print("intial_list", ini_list)
+
+diff_list = [y-x for x, y in zip(ini_list[:], ini_list[1::])]
 # printing difference list
-print ("difference list: ", str(diff_list))
+print("difference list: ", diff_list)

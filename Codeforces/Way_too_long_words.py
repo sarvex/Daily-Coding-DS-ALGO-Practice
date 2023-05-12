@@ -1,7 +1,7 @@
 # python3 file
 
 n = int(input())  # taking number of test cases as input
-for i in range(n):
+for _ in range(n):
     w = input()  # taking a word as input
     if(len(w) <= 10):  # if length of the word is less than or equal to 10
         print(w)  # we print that word directly

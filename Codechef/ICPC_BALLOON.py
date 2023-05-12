@@ -1,10 +1,10 @@
 #Solution to the ICPC Balloon Problem
 #Taking Testcases
-for t in range(int(input())):
+for _ in range(int(input())):
     #Input Code N & Array
     N = int(input())
     A = list(map(int, input().split()))
-    
+
 
 #Actual Problem's Solution Begun
     i = 0

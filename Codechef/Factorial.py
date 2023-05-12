@@ -4,9 +4,9 @@
 fact=1   #initalizing the variable
 number=int(input())  #inputs taking from the user
 i=number  #assigning the value
-while(i>0):  #iterating the looop for getting digfferent value of i
+while (i>0):  #iterating the looop for getting digfferent value of i
     fact=fact*i   #performing th ecalculation
-    i=i-1         #decrementing the value of i
+    i -= 1
 print("The value is ",fact)   #printing the value of fact
 '''
  Step 1 :- It will take input from user.

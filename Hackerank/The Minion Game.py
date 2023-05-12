@@ -1,6 +1,6 @@
 def minion_game(string):
     # your code goes here
-    vowels_list = set(['a','e','i','o','u','A','E','I','O','U'])
+    vowels_list = {'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'}
     consonants = 0
     vowels = 0
     n = len(string)
@@ -12,6 +12,6 @@ def minion_game(string):
     if vowels == consonants:
         print ("Draw")
     elif vowels > consonants:
-        print ("Kevin {}".format(vowels))
+        print(f"Kevin {vowels}")
     else:
-        print ("Stuart {}".format(consonants))
+        print(f"Stuart {consonants}")
